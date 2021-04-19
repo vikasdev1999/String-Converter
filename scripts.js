@@ -39,7 +39,7 @@ function toPascalCase(string) {
     var str = string.split(" ");
     var result="";
     str.forEach(str=>{
-        var a = str.charAt(0).toUpperCase() + str.slice(1);
+        var a = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
         result += a;
     });
     return result;
@@ -87,11 +87,11 @@ function toCamelCase(string){
     var counter = true;
     str.forEach(str=>{
         if(counter){
-            var a = str.charAt(0).toLowerCase() + str.slice(1);
+            var a = str.charAt(0).toLowerCase() + str.slice(1).toLowerCase();
             counter= false;
         }
         else{
-        var a = str.charAt(0).toUpperCase() + str.slice(1);
+        var a = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
         }
         result += a;
     });
