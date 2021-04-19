@@ -26,6 +26,10 @@ function jump(){
         var convertedString = toCamelCase(dom);
         document.querySelector('.add-text').innerHTML = convertedString;
     }
+    if(selectcConvert==6){
+        var convertedString = toUpperSnakeCase(dom);
+        document.querySelector('.add-text').innerHTML = convertedString;
+    }
 
 }
 
@@ -90,6 +94,24 @@ function toCamelCase(string){
         var a = str.charAt(0).toUpperCase() + str.slice(1);
         }
         result += a;
+    });
+    return result;
+}
+
+function toUpperSnakeCase(string){
+    var str = string.split(" ");
+    var result="";
+    var counter = str.length;
+    str.forEach(str=>{
+        if(counter>1){
+        var a = str.toUpperCase();
+        result += a + '_';
+        counter--;
+        }
+        else{
+            var a = str.toUpperCase();
+            result += a;
+        }
     });
     return result;
 }
