@@ -1,35 +1,29 @@
 function jump(){
-    var dom = document.querySelector("#string-input").value;
+    var dom = document.getElementById("string-input").value;
     var selectcConvert = parseInt(document.getElementById("month").value);
     
-    if(selectcConvert==0){
+    if(selectcConvert==0){_
         var convertedString = dom.toUpperCase();
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==1){
         var convertedString = dom.toLowerCase();
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==2){
         var convertedString = toPascalCase(dom);
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==3){
         var convertedString = toSnakeCase(dom);
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==4){
         var convertedString = toKebebCase(dom);
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==5){
         var convertedString = toCamelCase(dom);
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
     if(selectcConvert==6){
         var convertedString = toUpperSnakeCase(dom);
-        document.querySelector('.add-text').innerHTML = convertedString;
     }
+    document.querySelector('.add-text').innerHTML = convertedString;
 
 }
 
